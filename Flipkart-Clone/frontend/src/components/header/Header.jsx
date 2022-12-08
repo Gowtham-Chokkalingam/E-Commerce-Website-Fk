@@ -22,7 +22,7 @@ const SubHeading = styled(Typography)`
 `;
 
 const CustomButtonWrapper = styled(Box)`
-margin:0 1% 0 auto;
+  margin: 0 1% 0 auto;
 `;
 
 //> Handlong the css for html element in mui styled
@@ -57,7 +57,7 @@ const Header = () => {
         </Component>
         <Search></Search>
         <CustomButtonWrapper>
-          <CustomButtons/>
+          <CustomButtons />
         </CustomButtonWrapper>
       </Toolbar>
     </StyledHeader>
