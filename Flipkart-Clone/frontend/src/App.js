@@ -3,14 +3,16 @@ import Home from "./components/home/Home";
 
 import { Box } from "@mui/material";
 
+import DataProvider from "./context/DataProvider";
+
 function App() {
   return (
-    <div >
+    <DataProvider>
       <Header></Header>
       <Box style={{ marginTop: "64px" }}>
         <Home> </Home>
       </Box>
-    </div>
+    </DataProvider>
   );
 }
 
