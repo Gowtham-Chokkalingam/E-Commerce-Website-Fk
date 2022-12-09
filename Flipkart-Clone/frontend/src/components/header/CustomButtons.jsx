@@ -27,6 +27,7 @@ const LoginButton = styled(Button)`
   color: #2874f0;
   background: #ffff;
   text-transform: none;
+
   padding: 5px 40px;
   border-radius: 2px;
   box-shadow: none;
@@ -37,7 +38,7 @@ const LoginButton = styled(Button)`
 const CustomButtons = () => {
   const [open, setOpen] = useState(false);
 
-  const { account,setAccount } = useContext(DataContext);
+  const { account, setAccount } = useContext(DataContext);
 
   const openDialog = () => {
     setOpen(true);
@@ -46,7 +47,7 @@ const CustomButtons = () => {
   return (
     <Wrapper>
       {account ? (
-  <Profile account={account} setAccount={setAccount}></Profile>
+        <Profile account={account} setAccount={setAccount}></Profile>
       ) : (
         <LoginButton onClick={() => openDialog()} variant="contained">
           Login
