@@ -5,7 +5,7 @@ import React from "react";
 
 const SearchContainer = styled(Box)`
   background: #fff;
-  width:38%;
+  width:40%;
   border-radius:2px;
   margin-left:10px;
   display:flex;
