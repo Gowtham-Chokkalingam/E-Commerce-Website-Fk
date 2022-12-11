@@ -58,11 +58,11 @@ const Image = styled("img")({
 });
 
 const Text = styled(Typography)`
-font-size:14px;
-margin-top:5px
-`
+  font-size: 14px;
+  margin-top: 5px;
+`;
 
-const Slide = ({ products }) => {
+const Slide = ({ products, title, timer }) => {
   const timerURL = "https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/timer_a73398.svg";
 
   const renderer = ({ hours, minutes, seconds, completed }) => {
@@ -75,11 +75,13 @@ const Slide = ({ products }) => {
   return (
     <Component>
       <Deal>
-        <DealText>Deal Of The Day</DealText>
-        <Timer>
-          <img style={{ width: 24 }} src={timerURL} alt="timer"></img>
-          <Countdown date={Date.now() + 5.04e7} renderer={renderer}></Countdown>
-        </Timer>
+        <DealText>{title}</DealText>
+        {timer && (
+          <Timer>
+            <img style={{ width: 24 }} src={timerURL} alt="timer"></img>
+            <Countdown date={Date.now() + 5.04e7} renderer={renderer}></Countdown>
+          </Timer>
+        )}
         <ViewAllButton variant="contained" color="primary">
           {" "}
           View All
@@ -100,13 +102,13 @@ const Slide = ({ products }) => {
         containerClass="carousel-container"
         keyBoardControl={true}
       >
-        {products.map((product) => (
-          <Box textAlign={"center"} style={{ padding: "25px 15px" }}>
+        {products.map((product,i) => (
+          <Box key={i} textAlign={"center"} style={{ padding: "25px 15px" }}>
             <Image key={product.id} src={product.url} alt={product.id}></Image>
 
-            <Text style={{fontWeight:600,color:"#212121"}}>{product.title.shortTitle}</Text>
-            <Text style={{color:"green"}}>{product.discount}</Text>
-            <Text style={{color:"#212121",opacity:'0.6'}}>{product.tagline}</Text>
+            <Text style={{ fontWeight: 600, color: "#212121" }}>{product.title.shortTitle}</Text>
+            <Text style={{ color: "green" }}>{product.discount}</Text>
+            <Text style={{ color: "#212121", opacity: "0.6" }}>{product.tagline}</Text>
           </Box>
         ))}
       </Carousel>

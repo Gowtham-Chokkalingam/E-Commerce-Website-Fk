@@ -35,4 +35,4 @@ Connection(USERNAME, PASSWORD);
 app.listen(PORT, () => {
   console.log(`Server Started at ${PORT}`);
 });
-DefaultData();
+// DefaultData();

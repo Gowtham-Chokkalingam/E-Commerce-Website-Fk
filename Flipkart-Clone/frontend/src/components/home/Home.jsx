@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductsAction } from "../../redux/actions/productAction";
 import Banner from "./Banner";
+import MidSection from "./MidSection";
+import MidSlide from "./MidSlide";
 import NavBar from "./NavBar";
 import Slide from "./Slide";
 
@@ -36,12 +38,21 @@ useEffect(() => {
       <NavBar></NavBar>
       <Component>
         <Banner></Banner>
-        <Slide products={products}></Slide>
-        <Slide products={products}></Slide>
+        <MidSlide products={products} title={'Deal Of The Day'} timer={true}></MidSlide>
 
-        <Slide products={products}></Slide>
+        <MidSection></MidSection>
+        <Slide products={products} title={'Discounts For You'} timer={false}></Slide>
 
-        <Slide products={products}></Slide>
+        <Slide products={products} title={'Sugessting Items'} timer={false}></Slide>
+
+        <Slide products={products} title={'Top Selection'} timer={false}></Slide>
+        <Slide products={products} title={'Recomended'} timer={false}></Slide>
+        <Slide products={products} title={'Top Deals On Accessories'} timer={false}></Slide>
+
+
+
+
+
 
       </Component>
     </>
