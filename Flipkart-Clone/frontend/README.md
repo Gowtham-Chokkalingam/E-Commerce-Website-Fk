@@ -294,3 +294,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
+
+# Packages installed
+- Front-End
+  # Slider
+    - npm i react-multi-carousel
+  
+  # Timer Counter
+  - npm install react-countdown --save
+
+ # Redux
+    - npm i redux react-redux 
+    - npm i redux-thunk
+    - npm i redux-devtools-extension
+    - npm i axios
+
+
+- Back-End
+    - npm i express
+    - npm i nodemon
+    - npm i body-parser
+    - npm i mongoose
+    - npm i cors
+    - npm i dotenv

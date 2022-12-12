@@ -21,10 +21,14 @@ const responsive = {
   },
 };
 
-const Image = styled("img")({
+const Image = styled("img")(({ theme }) => ({
   width: "100%",
-  height: "280px",
-});
+  height: "240px",
+  [theme.breakpoints.down("md")]: {
+    ObjectFit: "cover",
+    height: "160px",
+  },
+}));
 const Banner = () => {
   return (
     <Carousel
